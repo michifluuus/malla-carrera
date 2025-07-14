@@ -1,65 +1,120 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background: #f2f2f2;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff0f6;
+  color: #5a2a47;
   padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 h1 {
-  color: #333;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 8px;
 }
 
-section {
-  margin-bottom: 40px;
+#creditos-aprobados {
+  font-size: 1.2rem;
+  color: #b33962;
+  font-weight: 600;
+}
+
+.year {
+  margin-bottom: 30px;
+  border-left: 5px solid #d6336c;
+  padding-left: 15px;
+}
+
+.semester {
+  margin-bottom: 20px;
 }
 
 h2 {
-  color: #555;
+  font-size: 1.8rem;
   margin-bottom: 10px;
-  text-align: left;
-  max-width: 800px;
-  margin: 0 auto 10px auto;
-  font-size: 1.4em;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 5px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
-  max-width: 800px;
-  margin: 0 auto;
+h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #d6336c;
 }
 
-/* Morado para asignaturas obligatorias */
-.asignatura {
-  padding: 20px;
-  background: #f3e5f5;
-  border: 2px solid #7b1fa2;
-  border-radius: 10px;
+.subjects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.subject {
+  background: #ffe6f0;
+  border: 2px solid #d6336c;
+  border-radius: 6px;
+  padding: 12px 18px;
   cursor: pointer;
-  transition: 0.3s;
+  width: 220px;
+  text-align: center;
+  font-weight: 600;
+  color: #5a2a47;
+  user-select: none;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 0 0 #d6336c;
 }
 
-.asignatura:hover {
-  background: #e1bee7;
+.subject small {
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: #b33962;
 }
 
-/* Azul suave para optativas */
-.optativa {
-  background-color: #e3f2fd;
-  border-color: #1976d2;
+.subject.locked {
+  background: #fce4ec;
+  border-color: #f8bbd0;
+  color: #aa5677;
+  cursor: not-allowed;
+  box-shadow: none;
 }
 
-/* Amarillo suave para el TFG */
-.pfg {
-  background-color: #fff9c4;
-  border-color: #fbc02d;
+.subject.locked:hover {
+  background: #fce4ec;
 }
 
-/* Verde para marcar cursada */
-.cursada {
-  background-color: #c8e6c9 !important;
-  border-color: #388e3c;
+.subject.unlocked {
+  background: #ffd6e8;
+  border-color: #d6336c;
+  color: #5a2a47;
+  cursor: pointer;
+  box-shadow: inset 0 0 8px 1px #d6336c;
+}
+
+.subject.approved {
+  background: #d6336c;
+  color: white;
+  border-color: #a22552;
+  cursor: default;
+  box-shadow: 0 0 10px 2px #a22552;
+}
+
+.subject.approved:hover {
+  background: #b21f48;
+}
+
+.subject:focus-visible {
+  outline: 3px solid #d6336c;
+}
+
+@media (max-width: 600px) {
+  .subject {
+    width: 100%;
+  }
 }
