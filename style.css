@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f2f2f2;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #555;
+  margin-bottom: 10px;
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto 10px auto;
+  font-size: 1.4em;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.asignatura {
+  padding: 20px;
+  background: #ffffff;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.asignatura:hover {
+  background: #e0f7fa;
+}
+
+.cursada {
+  background-color: #c8e6c9 !important;
+  border-color: #388e3c;
+}
